@@ -7,11 +7,14 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>lesson2</title>
     <script>
-        let dice = Math.floor(Math.random() * 6)+1;
-        if (dice % 2 === 0){
-            console.log(`${dice}は偶数です`);
-        }else{
-            console.log(`${dice}は奇数です`);
+        let yourDice = Math.floor(Math.random()*6)+1;
+        let enemyDice = Math.floor(Math.random()*6)+1;
+        if (yourDice > enemyDice){
+            console.log(`あなたの目：${yourDice}　敵の目：${enemyDice}　あなたの勝ち`);
+        } else if (yourDice === enemyDice){
+            console.log(`あなたの目：${yourDice}　敵の目：${enemyDice}　引き分け`);
+        } else {
+            console.log(`あなたの目：${yourDice}　敵の目：${enemyDice}　あなたの負け`);
         }
 
     </script>
