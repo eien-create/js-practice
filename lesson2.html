@@ -7,14 +7,17 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>lesson2</title>
     <script>
-        let yourDice = Math.floor(Math.random()*6)+1;
-        let enemyDice = Math.floor(Math.random()*6)+1;
-        if (yourDice > enemyDice){
-            console.log(`あなたの目：${yourDice}　敵の目：${enemyDice}　あなたの勝ち`);
-        } else if (yourDice === enemyDice){
-            console.log(`あなたの目：${yourDice}　敵の目：${enemyDice}　引き分け`);
-        } else {
-            console.log(`あなたの目：${yourDice}　敵の目：${enemyDice}　あなたの負け`);
+
+        for(let count = 1; count <= 100; count++){
+            if (count % 3 === 0 && count % 5 === 0){
+                console.log(`FizzBuzz`);
+            }else if (count % 3 === 0) {
+                console.log(`Fizz`);
+            }else if (count % 5 === 0) {
+                console.log(`Buzz`);
+            }else {
+                console.log(count);
+            }
         }
 
     </script>
