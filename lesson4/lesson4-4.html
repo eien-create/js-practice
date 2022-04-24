@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="jp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>lesson4-4</title>
+
+    <script>
+        let sum = 0 ;
+
+        //①iが1やったとして、3までの間+1ずつされる
+        for(let i = 1 ; i <= 3 ; i ++) {
+            //②ダイスの目定義
+            const diceNumber = dice();
+            //⑤何回目の時に何のダイスの目が出たか出力
+            console.log(`${i}回目の目は${diceNumber}です`);
+            //④ダイスの目がランダムで1~6まで出る
+            function dice() {
+                return Math.floor(Math.random() * 6)+1 ;
+            }
+            //⑥出力された合計
+            sum += diceNumber;
+        }
+        //⑦合計を出力
+        console.log(`合計は${sum}です`)
+    </script>
+</head>
+<body>
+
+</body>
+</html>
