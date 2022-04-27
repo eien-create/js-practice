@@ -5,22 +5,24 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>lesson4-5</title>
+    <title>lesson4-9</title>
 
     <script>
-        let sum = 0;
+        const array1 = ['バナナ', 'りんご', 'みかん', 'オレンジ', 'ぶどう'];
+        const array2 = [58, 91, 98, 96, 83];
 
-        for(let i = 1 ; i <= 5 ; i ++) {
-            const diceNumber = dice();
-            console.log(`${i}回目の目は${diceNumber}です`);
-            sum += diceNumber ;
+        console.log(`array1にももは${find(array1, 'もも')}`);
+        console.log(`array2に96は${find(array2, 96)}`);
+
+        function find(array, target) {
+
+            for(const value of array) {
+                if(value === target) {
+                    return 'あります';
+                }
+            }
+            return 'ありません';
         }
-
-        function dice() {
-            return Math.floor(Math.random() * 6)+1 ;
-        }
-
-        console.log(`5回サイコロをなげた時の目の平均は${sum/5}です`)
     </script>
 </head>
 <body>

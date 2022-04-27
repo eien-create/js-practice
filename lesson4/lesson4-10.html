@@ -11,17 +11,34 @@
         const array1 = ['バナナ', 'りんご', 'みかん', 'オレンジ', 'ぶどう'];
         const array2 = [58, 91, 98, 96, 83];
 
-        console.log(`array1にももは${find(array1, 'もも')}`);
-        console.log(`array2に96は${find(array2, 96)}`);
+        const findString = 'もも';
+        const findNumber = 58;
+
+        //もしarray1にfindString(配列内の要素)が
+        if(find(array1, findString)) {
+            //ある時
+            console.log(`array1に${findString}はあります`);
+        }
+        //無い時
+        else {
+            console.log(`array1に${findString}はありません`);
+        }
+
+        if(find(array2, findNumber)) {
+            console.log(`array1に${findNumber}はあります`);
+        } else {
+            console.log(`array1に${findNumber}はありません`);
+        }
+
 
         function find(array, target) {
 
             for(const value of array) {
                 if(value === target) {
-                    return 'あります';
+                    return true;
                 }
             }
-            return 'ありません';
+            return false;
         }
     </script>
 </head>

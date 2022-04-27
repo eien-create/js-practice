@@ -1,8 +1,31 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="jp">
 <head>
-  <meta charset="UTF-8">
-  <title>Title</title>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>lesson4-6</title>
+
+    <script>
+        diceAverage(10);
+        diceAverage(1000000);
+        
+        function diceAverage(n) {
+            let sum = 0;
+            
+            for (let i = 1 ; i <= n ; i++) {
+                const diceNumber = dice();
+                sum += diceNumber;
+            }
+            console.log(`${n}回サイコロを投げたときの目の平均は${sum / n}です`);
+        }
+
+        function dice() {
+            return Math.floor(Math.random() * 6) + 1;
+        }
+        
+    </script>
 </head>
 <body>
 
