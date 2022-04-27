@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="jp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>lesson4-7</title>
+
+    <script>
+
+        // 配列を定義
+        const array1 = [87, 96, 72, 88, 79];
+        const array2 = [58, 91, 98, 96, 83];
+
+        // 平均値を出力
+        console.log(`array1の平均値は${arrayAverage(array1)}です`);
+        console.log(`array2の平均値は${arrayAverage(array2)}です`);
+
+
+        function arrayAverage(array) {
+            let sum = 0;
+
+            // iが0で,iがarray length(配列の数)より小さくて,iに1ずつ足す時
+            for (let i = 0; i < array.length; i ++) {
+
+                //sumに配列iを代入
+                sum += array[i];
+            }
+            // 合計をarray length(配列の数)で割っている
+            return sum / array .length
+        }
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="jp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>lesson4-9</title>
+
+    <script>
+        const array1 = ['バナナ', 'りんご', 'みかん', 'オレンジ', 'ぶどう'];
+        const array2 = [58, 91, 98, 96, 83];
+
+        console.log(`array1にももは${find(array1, 'もも')}`);
+        console.log(`array2に96は${find(array2, 96)}`);
+
+        function find(array, target) {
+
+            for(const value of array) {
+                if(value === target) {
+                    return 'あります';
+                }
+            }
+            return 'ありません';
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>
